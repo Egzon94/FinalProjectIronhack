@@ -4,8 +4,6 @@ package com.activity.tradingnotes.security;
 import com.activity.tradingnotes.dto.LoginRequest;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.algorithms.Algorithm;
-import com.activity.tradingnotes.dto.LoginRequest;
-
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
