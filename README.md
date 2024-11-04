@@ -46,6 +46,25 @@ This project is a Spring Boot-based trading application that allows users to man
 
 
 
+
+## Controllers and Routes Structure
++ PortfolioController: /api/portfolio
+GET /: Retrieves all portfolio items.
+POST /: Adds a new portfolio item.
+
+
++ TradeController: /api/trade
+GET /: Retrieves all trades.
+POST /: Executes a new trade.
+
++TransactionsController: /api/transactions
+GET /: Retrieves all transactions.
+POST /: Records a new transaction.
+
+
+
+
+
 + Trade: Stores trade details like stockSymbol, quantity, price, and relationships with User and Portfolio.
 + Portfolio: Manages a collection of trades and transactions, with fields for name, trades, and associated user.
 + Transactions: Records each trade-related activity, with fields like transactionType and amount, and relationships 
