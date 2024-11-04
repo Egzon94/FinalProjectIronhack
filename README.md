@@ -45,6 +45,32 @@ This project is a Spring Boot-based trading application that allows users to man
 |  - portfolio          |
 
 
+## Setup
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Egzon94/FinalProjectIronhack.git
+   ```
+
+2. **Configure Database:**
+   ```bash
+   cd CREATE DATABASE trading_smart_db;
+   ```
+
+3. **Build the project using Maven:**
+   ```bash
+   mvn clean install
+   ```
+
+4. **Run the application:**
+   ```bash
+   mvn spring-boot:run
+   ```
+
+5. **Access the application:**
+   Open a web browser and go to `http://localhost:8081` to view the application.
+
+
 
 
 ## Controllers and Routes Structure
