@@ -108,6 +108,7 @@ POST /: Records a new transaction.
   
 + Transactions: Records each trade-related activity, with fields like transactionType and amount, and relationships 
   to both Trade and Portfolio.
+## Extra Links(....
 
 ## Future Work
 Looking forward, we have indentified areas for expansion and improvement, including:
