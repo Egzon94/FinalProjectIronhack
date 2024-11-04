@@ -71,7 +71,7 @@ public class SecurityConfig {
                 .requestMatchers(POST, "/api/users").hasAnyAuthority("ROLE_ADMIN")
                 .requestMatchers(POST, "/api/roles").hasAnyAuthority("ROLE_ADMIN")
                 .requestMatchers(POST, "/api/roles/add-to-user").hasAnyAuthority("ROLE_ADMIN")
-                .anyRequest().authenticated()); // any other endpoints require authentication
+                .anyRequest().permitAll()); // any other endpoints require authentication
 
         // add the custom authentication filter to the http security object
         http.addFilter(customAuthenticationFilter);
