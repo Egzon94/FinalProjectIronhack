@@ -76,8 +76,13 @@ This project is a Spring Boot-based trading application that allows users to man
 6. **Access the application:**
    Open a web browser and go to `http://localhost:6060` to view the application.
 
-
-
+## Technologies Used
+The project is built using the following technologies:
++ Java 17
++ Spring Boot
++ MySQL
++ Maven
++ Hibernate
 
 ## Controllers and Routes Structure
 + PortfolioController:
