@@ -111,4 +111,11 @@ POST /: Records a new transaction.
 
 ## Future Work
 Looking forward, we have indentified areas for expansion and improvement, including:
-+ Notes Insisght Class: A new class will be introduced to capture insights and observations on various notes, allowing users to manage and reference notes more effectively.
++ Notes Insight Class: A new class will be introduced to capture insights and observations on various notes, allowing users to manage and reference notes more effectively.
+
+## Resources
++ Spring Boot Documentation
++ MySQL Documentation
++ Maven Documentation
++ Postman
+## Team Members
