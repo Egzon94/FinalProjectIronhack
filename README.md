@@ -54,21 +54,33 @@ This project is a Spring Boot-based trading application that allows users to man
 
 2. **Configure Database:**
    ```bash
-   cd CREATE DATABASE trading_smart_db;
+    CREATE DATABASE trading_smart_db;
    ```
 
-3. **Build the project using Maven:**
+   
+3. **Set up database connection in application.properties:**
+   ```bash
+spring.application.name=TradingNotes
+spring.datasource.url=jdbc:mysql://localhost:3306/trading_smart_db
+spring.jpa.hibernate.ddl-auto=update
+spring.jpa.show-sql=true
+spring.datasource.username=root
+spring.datasource.password=Ei28021994@
+server.port=6060
+   ```
+
+4. **Build the project using Maven:**
    ```bash
    mvn clean install
    ```
 
-4. **Run the application:**
+5. **Run the application:**
    ```bash
    mvn spring-boot:run
    ```
 
-5. **Access the application:**
-   Open a web browser and go to `http://localhost:8081` to view the application.
+6. **Access the application:**
+   Open a web browser and go to `http://localhost:6060` to view the application.
 
 
 
