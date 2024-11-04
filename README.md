@@ -102,12 +102,13 @@ GET /: Retrieves all transactions.
 POST /: Records a new transaction.
 
 
-
-
-
 + Trade: Stores trade details like stockSymbol, quantity, price, and relationships with User and Portfolio.
   
 + Portfolio: Manages a collection of trades and transactions, with fields for name, trades, and associated user.
   
 + Transactions: Records each trade-related activity, with fields like transactionType and amount, and relationships 
   to both Trade and Portfolio.
+
+## Future Work
+Looking forward, we have indentified areas for expansion and improvement, including:
++ Notes Insisght Class: A new class will be introduced to capture insights and observations on various notes, allowing users to manage and reference notes more effectively.
