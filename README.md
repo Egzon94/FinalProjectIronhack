@@ -109,8 +109,8 @@ POST /: Records a new transaction.
 + Transactions: Records each trade-related activity, with fields like transactionType and amount, and relationships 
   to both Trade and Portfolio.
 ## Extra Links
-https://trello.com/b/B3kYM2mk/trading-journal-development
-https://prezi.com/p/edit/axhw-fk9iila/
++ https://trello.com/b/B3kYM2mk/trading-journal-development
++ https://prezi.com/p/edit/axhw-fk9iila/
 
 ## Future Work
 Looking forward, we have indentified areas for expansion and improvement, including:
