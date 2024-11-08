@@ -121,4 +121,3 @@ Looking forward, we have indentified areas for expansion and improvement, includ
 + MySQL Documentation
 + Maven Documentation
 + Postman
-## Team Members
