@@ -21,17 +21,24 @@ public class Transactions {
 
     private String transactionType;
 
-    private Double amount;
+    private double amount;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "trade_id")
     private Trade trade;
 
 
     @ManyToOne
-    @JoinColumn(name = "portfolio_id")
     @JsonIgnore
+    @JoinColumn(name = "portfolio_id")
     private Portfolio portfolio;
+
+    @ManyToOne
+    @JsonIgnore
+    @JoinColumn(name = "user_id")
+    private User user;
+
 
 }
 

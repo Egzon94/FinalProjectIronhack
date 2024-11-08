@@ -14,6 +14,7 @@ import java.util.List;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+
 public class Portfolio {
 
     @Id
@@ -23,13 +24,13 @@ public class Portfolio {
     private String name;
 
     @OneToMany(mappedBy = "portfolio")
-    @JsonIgnore
     private List<Trade> trades;
 
     @OneToMany(mappedBy = "portfolio")
     private List<Transactions> transactionsList;
 
     @ManyToOne
+    @JsonIgnore
     @JoinColumn(name = "user_id")
     private User user;
 }

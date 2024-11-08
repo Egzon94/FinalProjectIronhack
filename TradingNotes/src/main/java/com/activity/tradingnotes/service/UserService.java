@@ -31,6 +31,9 @@ public interface UserService {
     List<User> getUsers();
 
     User findByUsername(String name);
+
+    User getUserById(int i);
+
 }
 
 

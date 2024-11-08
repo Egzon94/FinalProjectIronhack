@@ -4,6 +4,7 @@ package com.activity.tradingnotes.demo;
 import com.activity.tradingnotes.model.Role;
 import com.activity.tradingnotes.model.User;
 import com.activity.tradingnotes.service.RoleService;
+import com.activity.tradingnotes.service.TradeService;
 import com.activity.tradingnotes.service.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.boot.CommandLineRunner;
@@ -15,6 +16,8 @@ public class DataLoader implements CommandLineRunner {
 
     private final UserService userService;
     private final RoleService roleService;
+    private final TradeService tradeService;
+
 
     @Override
     public void run(String... args) throws Exception {
@@ -31,5 +34,12 @@ public class DataLoader implements CommandLineRunner {
         roleService.addRoleToUser("jane", "ROLE_USER");
         roleService.addRoleToUser("chris", "ROLE_ADMIN");
         roleService.addRoleToUser("chris", "ROLE_USER");
+
+
+
+
     }
+
+
+
 }

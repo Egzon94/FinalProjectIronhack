@@ -98,4 +98,11 @@ public class UserServiceImpl implements UserService, UserDetailsService {
     public User findByUsername(String name) {
         return null;
     }
+
+    @Override
+    public User getUserById(int i) {
+        return null;
+    }
+
+
 }

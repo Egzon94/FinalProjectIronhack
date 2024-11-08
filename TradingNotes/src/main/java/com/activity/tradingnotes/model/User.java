@@ -47,6 +47,9 @@ public class User {
         this.username = username;
         this.password = password;
     }
+
+    @OneToMany(mappedBy = "user")
+    private List<Transactions> transactions = new ArrayList<>();
 }
 
 

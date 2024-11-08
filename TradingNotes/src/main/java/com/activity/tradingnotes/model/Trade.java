@@ -1,21 +1,16 @@
 package com.activity.tradingnotes.model;
 
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Entity
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class Trade {
-
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,17 +20,13 @@ public class Trade {
     private int quantity;
     private double price;
 
-    @ManyToOne
+    @ManyToOne // Assuming a many-to-one relationship with User
     @JsonIgnore
-    @JoinColumn(name = "user_id", nullable = false)
+    @JoinColumn(name = "user_id")
     private User user;
 
-    @ManyToOne
+    @ManyToOne // Assuming a many-to-one relationship with Portfolio
+    @JoinColumn(name = "portfolio_id")
     @JsonIgnore
-    @JoinColumn(name = "portfolio_id", nullable = false)
     private Portfolio portfolio;
-
-    @OneToMany(mappedBy = "trade")
-    private List<Transactions> transactionsList = new ArrayList<>();
-
 }
