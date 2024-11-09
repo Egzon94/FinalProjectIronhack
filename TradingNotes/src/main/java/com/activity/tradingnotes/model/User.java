@@ -1,6 +1,7 @@
 package com.activity.tradingnotes.model;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -42,6 +43,7 @@ public class User {
 
     @OneToMany(mappedBy = "user")
     private List<Portfolio> portfolios = new ArrayList<>();
+
     public User(String name, String username, String password) {
         this.name = name;
         this.username = username;

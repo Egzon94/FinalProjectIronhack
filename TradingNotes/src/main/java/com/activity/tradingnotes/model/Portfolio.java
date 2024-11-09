@@ -1,12 +1,15 @@
 package com.activity.tradingnotes.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -23,14 +26,15 @@ public class Portfolio {
 
     private String name;
 
-    @OneToMany(mappedBy = "portfolio")
-    private List<Trade> trades;
+    @OneToMany(mappedBy = "portfolio", cascade = CascadeType.ALL)
+    private List<Trade> trades = new ArrayList<>();
 
-    @OneToMany(mappedBy = "portfolio")
-    private List<Transactions> transactionsList;
+    @OneToMany(mappedBy = "portfolio", cascade = CascadeType.ALL)
+    private List<Transactions> transactionsList = new ArrayList<>();
+
 
     @ManyToOne
-    @JsonIgnore
     @JoinColumn(name = "user_id")
+    @JsonBackReference
     private User user;
 }

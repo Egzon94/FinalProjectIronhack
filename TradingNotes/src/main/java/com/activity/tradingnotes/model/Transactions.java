@@ -1,6 +1,7 @@
 package com.activity.tradingnotes.model;
 
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -23,20 +24,18 @@ public class Transactions {
 
     private double amount;
 
-    @ManyToOne
-    @JsonIgnore
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "trade_id")
     private Trade trade;
 
 
     @ManyToOne
-    @JsonIgnore
     @JoinColumn(name = "portfolio_id")
     private Portfolio portfolio;
 
     @ManyToOne
-    @JsonIgnore
     @JoinColumn(name = "user_id")
+    @JsonBackReference
     private User user;
 
 
